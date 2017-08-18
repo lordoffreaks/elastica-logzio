@@ -1,0 +1,25 @@
+{
+	"name": "lordoffreak/elastica-logzio",
+	"description": "PHP client to save realtime logs to Logz.io",
+	"keywords": [],
+	"license": "MIT",
+	"authors": [
+        {
+            "name": "Alejandro Tabares",
+            "homepage": "https://www.amajua.com/"
+        }
+    ],
+    "require": {
+    	"php": ">=5.6.4 || ^7.0",
+    	"ruflin/elastica": "^5.3",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+    	"phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LogzIO\\": "src/LogzIO/"
+        }
+    }
+}
