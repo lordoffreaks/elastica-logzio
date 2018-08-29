@@ -15,12 +15,12 @@ $ composer require lordoffreak/elastica-logzio
 First of all, you need an account on Logz.io. Then, go to you profile settings and get your api key (token).
 
 #### Configure
-To configure the library, you just need to get an instance of `LogzIO\LogzIOGuzzle`, set the `token` and the the `type`. You need to do it once per Transport. After that create an instance of `LogzIO\LogzIOElasticaClient` and use it as a normal `Elastica\Client` client.
+To configure the library, you just need to get an instance of `LogzIO\Transport\LogzIOGuzzle`, set the `token` and the the `type`. You need to do it once per Transport. After that create an instance of `LogzIO\LogzIOElasticaClient` and use it as a normal `Elastica\Client` client.
 
 ```sh
 <?php
-use LogzIO\LogzIOGuzzle;
 use LogzIO\LogzIOElasticaClient;
+use LogzIO\Transport\LogzIOGuzzle;
 
 $config = [];
 $config['transport'] = new LogzIOGuzzle();
@@ -35,8 +35,8 @@ To send a log, you need to get an instance of `LogzIO\LogzIOElasticaClient` and 
 
 ```sh
 <?php
-use LogzIO\LogzIOGuzzle;
 use LogzIO\LogzIOElasticaClient;
+use LogzIO\Transport\LogzIOGuzzle;
 
 $config = [];
 $config['transport'] = new LogzIOGuzzle();
@@ -62,8 +62,8 @@ As described in https://github.com/Seldaek/monolog/blob/master/src/Monolog/Handl
 
 ```sh
 <?php
-use LogzIO\LogzIOGuzzle;
 use LogzIO\LogzIOElasticaClient;
+use LogzIO\Transport\LogzIOGuzzle;
 
 // Your type.
 $type = 'record';
