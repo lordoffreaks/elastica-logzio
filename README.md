@@ -7,7 +7,7 @@ PHP library to send realtime logs to Logz.io, an ELK as a service.
 Install with composer:
 
 ```sh
-$ composer require lordoffreaks/elastica-logzio
+$ composer require lordoffreak/elastica-logzio
 ```
 
 ### Usage
