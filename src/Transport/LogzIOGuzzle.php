@@ -1,6 +1,6 @@
 <?php
 
-namespace LogzIO;
+namespace LogzIO\Transport;
 
 use Elastica\Transport\Guzzle;
 use Elastica\Connection;
