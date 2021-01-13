@@ -1,4 +1,5 @@
 <?php
+
 namespace LogzIO;
 
 use Elastica\Client;
@@ -17,8 +18,12 @@ class LogzIOElasticaClient extends Client
      */
     public function __construct(array $config = [], $callback = null, LoggerInterface $logger = null)
     {
-        $config['host'] = 'listener.logz.io';
-        $config['port'] = 8071;
+        if (empty($config['host'])) {
+            $config['host'] = 'listener.logz.io';
+        }
+        if (empty($config['port'])) {
+            $config['port'] = 8071;
+        }
         $this->setConfig($config);
 
         parent::__construct($config, $callback, $logger);
